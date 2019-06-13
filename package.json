@@ -1,0 +1,19 @@
+{
+	"name": "snowshoes",
+	"version": "0.2.8",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --coverage",
+		"pull": "node ./scripts/get_scripts.js",
+		"update": "node ./scripts/update.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.0"
+	},
+	"devDependencies": {
+		"jest": "^24.8.0"
+	}
+}
