@@ -6,7 +6,7 @@ const registry = require('../config/registry.json');
 
 const script_name = process.argv[2];
 
-// this func finds the script by the name (same as file name)
+// this func finds the script in the registry by name (same as file name)
 // is there a better way to do this??
 const findItemInRegistry = (name) => {
 	return registry.filter((item) => {
@@ -18,13 +18,13 @@ const item_data = findItemInRegistry(script_name);
 const url = '/api/now/table/' + item_data.table + "/" + item_data.sys_id;
 const folder = item_data.table;
 const file_name = script_name + '.js';
-const updated_script = fs.readFileSync(`./service-now/${folder}/` + file_name, 'utf8');
+const updated_script = fs.readFileSync(`./service-now/${folder}/${file_name}`, 'utf8');
 
 const putScript = () => {
 	return new Promise((resolve, reject) => {
 		snowAxios.put(url, {
 			script: updated_script
-			}).then((res) => {
+		}).then((res) => {
 			resolve(res.status)
 		})
 	})

@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "jest --coverage",
 		"pull": "node ./scripts/get_scripts.js",
-		"update": "node ./scripts/update.js"
+		"update": "node ./scripts/update.js",
+		"update-all": "node ./scripts/update_all.js"
 	},
 	"author": "",
 	"license": "ISC",

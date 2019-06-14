@@ -47,8 +47,13 @@ const writeSNDataToFiles = async (table) => {
 	
 }
 
-writeSNDataToFiles(table_maps.script_includes).then(() => {
-	writeSNDataToFiles(table_maps.business_rules)
+// writeSNDataToFiles(table_maps.script_includes).then(() => {
+// 	writeSNDataToFiles(table_maps.business_rules)
+// })
+
+Object.keys(table_maps).forEach((table) => {
+	writeSNDataToFiles(table_maps[table])
 })
+
 
 module.exports = { getScriptsFromSN, write_json_registry, write_javascript, writeSNDataToFiles };
