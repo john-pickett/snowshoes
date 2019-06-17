@@ -1,7 +1,7 @@
 var fs = require('fs');
 const snowAxios = require('../config/axios.js');
 const config = require('../config/snow-config.json');
-const { write_json_registry, write_javascript } = require('./utils.js');
+const { write_json_registry, write_javascript, asyncForEach } = require('./utils.js');
 const table_maps = require('../config/table-maps.json');
 const app_name = config.app_name;
 
@@ -32,6 +32,7 @@ const configureRegistryData = (scripts) => {
 }
 
 const writeSNDataToFiles = async (table) => {
+	console.log('grabbing ' + table);
 	const scripts = await getScriptsFromSN(table);
 
 	return new Promise((resolve, reject) => {
@@ -51,9 +52,12 @@ const writeSNDataToFiles = async (table) => {
 // 	writeSNDataToFiles(table_maps.business_rules)
 // })
 
-Object.keys(table_maps).forEach((table) => {
-	writeSNDataToFiles(table_maps[table])
-})
+const start = (async () => {
+	await asyncForEach(Object.values(table_maps), async (table) => {
+		await writeSNDataToFiles(table)
+	})
+})();
+
 
 
 module.exports = { getScriptsFromSN, write_json_registry, write_javascript, writeSNDataToFiles };

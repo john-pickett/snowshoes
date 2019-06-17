@@ -32,4 +32,10 @@ const write_javascript = (file_name, data, class_name) => {
 	})
 }
 
-module.exports = { write_json_registry, write_javascript };
+const asyncForEach = async (array, callback) => {
+	for (let index = 0; index < array.length; index++) {
+	  await callback(array[index])
+	}
+  }
+
+module.exports = { write_json_registry, write_javascript, asyncForEach };
