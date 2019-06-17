@@ -48,10 +48,6 @@ const writeSNDataToFiles = async (table) => {
 	
 }
 
-// writeSNDataToFiles(table_maps.script_includes).then(() => {
-// 	writeSNDataToFiles(table_maps.business_rules)
-// })
-
 const start = (async () => {
 	await asyncForEach(Object.values(table_maps), async (table) => {
 		await writeSNDataToFiles(table)
