@@ -1,4 +1,3 @@
-
 #tests
 coverage/
 tests/
@@ -8,3 +7,6 @@ service-now/
 
 #node
 node_modules/
+
+#test file
+scripts/sum.js
