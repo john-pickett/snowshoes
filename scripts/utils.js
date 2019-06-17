@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const write_json_registry = (file_name, file_data) => { // data must be a string e.g., JSON.stringify(data)
 	const dir = __dirname + '/../config';
+	// if statement is for adding to existing registry instead of overwriting
 	if (fs.existsSync(`${dir}/${file_name}.json`)){
 		const existing_data = JSON.parse(fs.readFileSync(`${dir}/${file_name}.json`, 'utf8'))
 		file_data = JSON.parse(file_data);
