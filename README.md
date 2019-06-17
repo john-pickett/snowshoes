@@ -11,12 +11,7 @@ Snowshoes allows developers to access their SN code scripts from their local dev
 
 2) `cd snowshoes` and then run `npm i`. 
 
-3) Create two files in the `/config` folder: `registry.json` and `snow-config.json`. 
-
-registry.json
-```
-[]
-```
+3) Look in the `/config` folder and edit the `snow-config.json` file with your credentials/info. Put the URl of the instance you're working in, your username and password, and the name of the application you're working on. (Global is not recommended.)
 
 snow-config.json
 ```
@@ -28,20 +23,15 @@ snow-config.json
 }
 ```
 
-For the registry, type in a set of empty brackets. For snow-config, copy and paste your URL, username, password, and the application that you're working in. (Global is not recommended.)
-
 ### Usage
 
 There are three commands available. Type them into the same command line that you used for Git.
 
-`npm run pull` pulls down all Script Includes, Business Rules, UI Actions, Client Scripts, and Mid-server Script Includes. Support for portal pages and widgets coming soon.
+`npm run pull` pulls down all Script Includes, Business Rules, UI Actions, Client Scripts, and Mid-server Script Includes for your current application. Support for portal pages and widgets coming soon.
 
 `npm run update <file>` sends the updated version of your script back to SN. Don't include the file extension in your command. Ex: `npm run update "MyFile"`
 
 `npm run update-all` sends every script back to SN and updates them all.
-
-
-
 
 ### Resources
 
