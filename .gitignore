@@ -1,7 +1,5 @@
-#config files
-config/snow-config.json
 
-#unit tests
+#tests
 coverage/
 tests/
 
