@@ -30,11 +30,11 @@ There are three commands available. Type them into the same command line that yo
 `npm run pull` pulls down all Script Includes, Business Rules, UI Actions, Client Scripts, and Mid-server Script Includes for your current application. They will be saved locally in a `service-now` folder. 
 
 Folder: Script Category
-`sys_script_include`: Script Includes
-`ecc_agent_script_includes`: Mid-server Script Includes
-`sys_script`: Business Rules
-`sys_script_client`: Client Scripts
-`sys_ui_action`: UI Actions
+* `sys_script_include`: Script Includes
+* `ecc_agent_script_includes`: Mid-server Script Includes
+* `sys_script`: Business Rules
+* `sys_script_client`: Client Scripts
+* `sys_ui_action`: UI Actions
 
 Support for portal pages and widgets coming soon.
 
