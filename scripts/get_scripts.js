@@ -22,10 +22,12 @@ const configureRegistryData = (scripts) => {
 	let registryData = []
 
 	scripts.forEach((item) => {
-		let currentScript = {}
+		let currentScript = {};
 		currentScript.name = item.name;
 		currentScript.sys_id = item.sys_id;
 		currentScript.table = item.sys_class_name; // is sys_class_name always the same as table??
+		currentScript.created_on = item.sys_created_on;
+		currentScript.updated_on = item.sys_updated_on;
 		registryData.push(currentScript);
 	})
 	return registryData;
