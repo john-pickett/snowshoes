@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest --coverage",
+		"test": "jest --coverage --verbose --silent",
+		"test-log": "jest",
 		"pull": "node ./scripts/get_scripts.js",
 		"update": "node ./scripts/update.js",
 		"update-all": "node ./scripts/update_all.js"

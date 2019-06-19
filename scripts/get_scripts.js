@@ -56,4 +56,4 @@ const start = (async () => {
 
 
 
-module.exports = { getScriptsFromSN, write_json_registry, write_javascript, writeSNDataToFiles };
+module.exports = { getScriptsFromSN, configureRegistryData, writeSNDataToFiles };
