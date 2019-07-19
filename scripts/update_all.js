@@ -15,7 +15,7 @@ const putScript = (url, updated_script) => {
 
 const updateAllScripts = async (registry) => {
 	registry.forEach(async (script) => {
-		console.log('putting ' + script.table)
+		console.log('updating ' + script.name);
 		let url = '/api/now/table/' + script.table + "/" + script.sys_id;
 		let updated_script = fs.readFileSync(`./service-now/${script.table}/${script.name}.js`, 'utf8');
 		const result = await putScript(url, updated_script);

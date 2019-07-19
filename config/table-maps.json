@@ -3,7 +3,5 @@
 	"business_rules": "sys_script",
 	"ui_actions": "sys_ui_action",
 	"client_scripts": "sys_script_client",
-	"mid_server_script_includes": "ecc_agent_script_include",
-	"portal_pages": "sp_page",
-	"portal_widgets": "sp_widget"
+	"mid_server_script_includes": "ecc_agent_script_include"
 }
